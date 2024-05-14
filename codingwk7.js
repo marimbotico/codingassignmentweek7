@@ -95,7 +95,7 @@ let lastName = 'Fernandez'
 function fullName(a, b) {
     return firstName + " " + lastName
 }
-console.log("No.8) My full name is :", fullName());// pretty sel explanatory a + b with " " for a space.
+console.log("No.8) My full name is :", fullName());// pretty self explanatory a + b with " " for a space.
 
 /*9.  Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array 
 is greater than 100.*/
@@ -196,7 +196,7 @@ function printCryptoPrices(cryptos, prices) {// this function takes 2 parameters
     }
 }
 }
-console.log("No.13: Name and prices of cryptocurrencies are:");
+console.log("No.13: The Names and Prices of the cryptocurrencies are:");
 printCryptoPrices(cryptos, prices);
 
 /*Template Literals:
