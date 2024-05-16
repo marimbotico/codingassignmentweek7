@@ -81,12 +81,24 @@ const word = "hello"
 const n = 0
 
 function concat(word, n) {
-    let concatenatedWord = ""// I use an empty string to store the result
+    let concatenatedWord = "";// I use an empty string to store the result
     for (let i = 0; i < n; i++) { // as long as i is less than the number this loop will iterate
-        concatenatedWord += word // in each iteration I concatenate the word to the result word + word + word, ...
-    } return concatenatedWord // the result is the word concatenated to itself n amount of times.
+        concatenatedWord += word; // in each iteration I concatenate the word to the result word + word + word, ...
+    } return concatenatedWord; // the result is the word concatenated to itself n amount of times.
 }
 console.log("No.7) The concatenated word is:", concat(word, 6));// hello will print 6 times but if would switch it to 8, it would print 8 times.
+
+/*Another way we learned in class using arrow functions:*/
+let someFunction = (word, n) => {
+    let result = '';
+    for (let i = 0; i < n; i++) {
+        result += word;
+    }
+    return result;
+};
+
+console.log("Here is another way to get the same result:", someFunction('hello', 4));
+
 /*8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name 
 should be the first and the last name separated by a space.*/
 
@@ -185,16 +197,16 @@ you created it.*/
 const cryptos = ["bitcoin", "ethereum", "cardano", "solana", "xrp", "doge"];// 6 elements
 const prices = [63000, 3000, 0.30, 140, 0.50, 0.20];// 6 elements
 
-function printCryptoPrices(cryptos, prices) {// this function takes 2 parameters which happen to be arrays
+let printCryptoPrices = (cryptos, prices) => {// this function takes 2 parameters which happen to be arrays
     if (cryptos.length !== prices.length) {// if the length of the arrays are not the same it will print the error message
         return "Error: The length of the arrays does not match.";
     } else {
-    for (let i = 0; i < cryptos.length; i++) {
-        console.log (`${cryptos[i]}: $${prices[i]}`);// instead of using return, I used console.log since once a function is return it exists the loop
-     // ${}: These are template literals. They allow us to embed expressions within a string. 
-     //console.log(cryptos[i] + ": $" + prices[i]); //ES5 vs ES6
+        for (let i = 0; i < cryptos.length; i++) {
+            console.log(`${cryptos[i]}: $${prices[i]}`);// instead of using return, I used console.log since once a function is return it exists the loop
+            // ${}: These are template literals. They allow us to embed expressions within a string. 
+            //console.log(cryptos[i] + ": $" + prices[i]); //ES5 vs ES6
+        }
     }
-}
 }
 console.log("No.13: The Names and Prices of the cryptocurrencies are:");
 printCryptoPrices(cryptos, prices);
